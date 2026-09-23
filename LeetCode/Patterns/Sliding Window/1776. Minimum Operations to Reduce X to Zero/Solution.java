@@ -1,24 +1,35 @@
 class Solution {
-
     public int minOperations(int[] nums, int x) {
-        int ans = solve(nums, 0, nums.length - 1, x);
-        return ans == Integer.MAX_VALUE ? -1 : ans;
-    }
 
-    static int solve(int[] nums, int l, int r, int x) {
+        int n = nums.length;
+        int total = 0;
 
-        if (x == 0) return 0;
+        for (int num : nums) {
+            total += num;
+        }
 
-        if (l > r || x < 0) return Integer.MAX_VALUE;
+        int target = total - x;
 
-        int left = solve(nums, l + 1, r, x - nums[l]);
+        if (target < 0) return -1;
+        if (target == 0) return n;
 
-        int right = solve(nums, l, r - 1, x - nums[r]);
+        int l = 0;
+        int sum = 0;
+        int maxLen = -1;
 
-        int best = Math.min(left, right);
+        for (int r = 0; r < n; r++) {
 
-        return best == Integer.MAX_VALUE
-                ? best
-                : best + 1;
+            sum += nums[r];
+
+            while (sum > target && l <= r) {
+                sum -= nums[l++];
+            }
+
+            if (sum == target) {
+                maxLen = Math.max(maxLen, r - l + 1);
+            }
+        }
+
+        return maxLen == -1 ? -1 : n - maxLen;
     }
 }
