@@ -21,6 +21,6 @@ class Solution {
                 else    return -1;
             }
         }
-        return count;
+        return (x == 0) ? count : -1;
     }
 }
