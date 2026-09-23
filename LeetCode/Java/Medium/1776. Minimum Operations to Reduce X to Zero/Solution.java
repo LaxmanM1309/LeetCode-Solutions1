@@ -6,7 +6,7 @@ class Solution {
         int l = 0;
         int r = n-1;
         // for(int i = 0 ; i < n ; i++){
-        while(l < r){
+        while(l <= r){
             if(x == 0)  return count;
             else{
                 if(nums[l] <= x && nums[l] >= nums[r]){
