@@ -7,9 +7,7 @@ class Solution {
             sum += temp;
         }
         return sum;
-        
     }
-
     public int smallestIndex(int[] nums) {
         for(int i = 0 ; i < nums.length ; i++){
             int sum = digitSum(nums[i]);
@@ -20,3 +18,10 @@ class Solution {
         return -1;
     }
 }
+
+
+
+
+
+
+
