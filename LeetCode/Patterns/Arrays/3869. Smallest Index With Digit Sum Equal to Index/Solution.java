@@ -1,9 +1,9 @@
 class Solution {
-    public static int digitSum(int num){
+    public static int digitSum(int nums){
         int sum = 0;
-        while(num > 0){
-            int temp = num % 10;
-            num /= 10;
+        while(nums > 0){
+            int temp = nums % 10;
+            nums /= 10;
             sum += temp;
         }
         return sum;
