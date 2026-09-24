@@ -7,6 +7,7 @@ class Solution {
             sum += temp;
         }
         return sum;
+        
     }
 
     public int smallestIndex(int[] nums) {
