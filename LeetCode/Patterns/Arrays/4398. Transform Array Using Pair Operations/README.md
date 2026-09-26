@@ -5,8 +5,8 @@
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
 ### 🚀 Performance
-- **Runtime:** 1 ms
-- **Memory:** 175.3 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
