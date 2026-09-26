@@ -1,63 +1,52 @@
-import java.util.*;
-
 class Solution {
     public int longestSubarray(int[] nums, int k) {
-
         int n = nums.length;
+        if (k == 1)
+            return n;
+        int[] firstPos = new int[k];
+        int[] previous = new int[k];
+        int[] bestStart = new int[k];
+        int[] pointer = new int[k];
+        Arrays.fill(firstPos, -1);
+        Arrays.fill(bestStart, Integer.MAX_VALUE);
+
+        firstPos[0] = 0;
+        int[] residueOrder = new int[k];
+        int orderSize = 1;
+        residueOrder[0] = 0;
+        int prefixSum = 0;
         int answer = 0;
+        for (int r = 1; r <= n; r++) {
+            int valueRem = nums[r - 1] % k;
+            if (valueRem < 0)
+                valueRem += k;
+            int doubleRem = (2 * valueRem) % k;
 
-        for (int left = 0; left < n; left++) {
-
-            long sum = 0;
-            boolean[] seen = new boolean[k];
-
-            for (int right = left; right < n; right++) {
-
-                sum += nums[right];
-
-                int length = right - left + 1;
-
-                int sumRem = (int)(sum % k);
-                if (sumRem < 0) {
-                    sumRem += k;
+            while (pointer[doubleRem] < orderSize) {
+                int q = residueOrder[pointer[doubleRem]];
+                int left = firstPos[q];
+                if (left > r - 1)
+                    break;
+                if (left >= previous[doubleRem]) {
+                    int target = (q + doubleRem) % k;
+                    if (left < bestStart[target])
+                        bestStart[target] = left;
                 }
-
-                // Case 1: no element needs to be negated
-                if (sumRem == 0) {
-                    answer = Math.max(answer, length);
-                }
-
-                // Add current element
-                int value = nums[right] % k;
-                if (value < 0) {
-                    value += k;
-                }
-
-                seen[value] = true;
-
-                // Case 2: negate one element
-                if (k % 2 == 1) {
-
-                    // k is odd, so 2 has an inverse
-                    int needed = (int)((long)sumRem * ((k + 1) / 2) % k);
-
-                    if (seen[needed]) {
-                        answer = Math.max(answer, length);
-                    }
-
-                } else if (sumRem % 2 == 0) {
-
-                    int needed = sumRem / 2;
-
-                    if (seen[needed] ||
-                        seen[needed + k / 2]) {
-
-                        answer = Math.max(answer, length);
-                    }
-                }
+                pointer[doubleRem]++;
             }
+            pointer[doubleRem] = r;
+            prefixSum += valueRem;
+            if (prefixSum >= k)
+                prefixSum -= k;
+            if (firstPos[prefixSum] != -1)
+                answer = Math.max(answer, r - firstPos[prefixSum]);
+            else {
+                firstPos[prefixSum] = r;
+                residueOrder[orderSize++] = prefixSum;
+            }
+            if (bestStart[prefixSum] != Integer.MAX_VALUE)
+                answer = Math.max(answer, r - bestStart[prefixSum]);
         }
-
         return answer;
     }
 }
