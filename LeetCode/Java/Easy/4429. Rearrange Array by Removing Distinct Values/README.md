@@ -6,7 +6,7 @@
 
 ### 🚀 Performance
 - **Runtime:** 10 ms
-- **Memory:** 47.4 MB
+- **Memory:** 47.2 MB
 
 ---
 
