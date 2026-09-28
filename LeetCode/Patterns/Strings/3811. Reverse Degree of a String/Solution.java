@@ -12,6 +12,7 @@ class Solution {
             System.out.println( reverse);
             product += (i+1) * reverse;
         }
+        int temp;
         return product;
     }
 }
