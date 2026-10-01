@@ -18,6 +18,7 @@ class Solution {
             else if(ch == ')' && !s.isEmpty() && s.peek() == '('){
                 s.pop();
             }
+            else return false;
             i++;
         }
         return s.isEmpty();
