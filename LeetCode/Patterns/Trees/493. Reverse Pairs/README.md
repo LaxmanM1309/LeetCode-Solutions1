@@ -1,6 +1,6 @@
 # 📝 493. Reverse Pairs (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/reverse-pairs)
+🔗 [Problem Link](https://leetcode.com/problems/reverse-pairs/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Hard-red) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
@@ -8,8 +8,8 @@
 Array, Binary Search, Divide and Conquer, Binary Indexed Tree, Segment Tree, Merge Sort, Ordered Set, Treap
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 77 ms
+- **Memory:** 59.2 MB
 
 ---
 
