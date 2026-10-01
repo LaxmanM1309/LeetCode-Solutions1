@@ -2,14 +2,14 @@
 
 🔗 [Problem Link](https://leetcode.com/problems/isomorphic-strings/)
 
-![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-C-blue)
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
 ### 💡 Tags
 Hash Table, String
 
 ### 🚀 Performance
-- **Runtime:** 27 ms
-- **Memory:** 8.3 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 

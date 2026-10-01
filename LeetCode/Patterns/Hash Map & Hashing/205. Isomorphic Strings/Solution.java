@@ -9,6 +9,11 @@ class Solution {
                     return false;
                 }
             }
+            else if(map.containsValue(tChar[i])){
+                if(map.get(tChar[i]) != sChar[i]){
+                    return false;
+                }
+            }
             else{
                 map.put(sChar[i] , tChar[i]);
             }
