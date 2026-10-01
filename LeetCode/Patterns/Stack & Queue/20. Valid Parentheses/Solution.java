@@ -9,13 +9,13 @@ class Solution {
             if(ch == '[' || ch == '{' || ch == '('){
                 s.push(ch);
             }
-            else if(ch == ']' && s.peek() == '['){
+            else if(ch == ']' && !s.isEmpty() && s.peek() == '['){
                 s.pop();
             }
-            else if(ch == '}' && s.peek() == '{'){
+            else if(ch == '}' && !s.isEmpty() && s.peek() == '{'){
                 s.pop();
             }
-            else if(ch == ')' && s.peek() == '('){
+            else if(ch == ')' && !s.isEmpty() && s.peek() == '('){
                 s.pop();
             }
             i++;
