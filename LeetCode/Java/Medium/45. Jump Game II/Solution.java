@@ -4,8 +4,8 @@ class Solution {
         int end = 0;
         int farthest = 0;
         int ans = 0;
-        
-        for(int i = 0 ; i < n ; i++){
+
+        for(int i = 0 ; i < n-1 ; i++){
             farthest = Math.max(farthest , nums[i]+i);
 
             if(farthest >= n-1){
