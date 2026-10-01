@@ -1,6 +1,6 @@
 # 📝 383. Ransom Note (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/ransom-note)
+🔗 [Problem Link](https://leetcode.com/problems/ransom-note/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
@@ -8,8 +8,8 @@
 Hash Table, String, Counting
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 15 ms
+- **Memory:** 47.2 MB
 
 ---
 
