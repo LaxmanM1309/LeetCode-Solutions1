@@ -1,6 +1,6 @@
 # 📝 45. Jump Game II (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/jump-game-ii)
+🔗 [Problem Link](https://leetcode.com/problems/jump-game-ii/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
