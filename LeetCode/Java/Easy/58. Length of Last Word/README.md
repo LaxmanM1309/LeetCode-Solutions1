@@ -1,6 +1,6 @@
 # 📝 58. Length of Last Word (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/length-of-last-word/?envType=study-plan-v2&envId=top-interview-150)
+🔗 [Problem Link](https://leetcode.com/problems/length-of-last-word/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
