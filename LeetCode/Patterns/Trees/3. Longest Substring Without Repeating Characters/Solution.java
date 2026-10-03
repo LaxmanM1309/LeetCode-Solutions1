@@ -1,18 +1,16 @@
 class Solution {
-    public int lengthOfLongestSubstring(String s) {
-        int n = s.length();
-        int l = 0 , r = 0;
-        int maxlen = 0;
-        HashSet <Character> set = new HashSet();
-        while(r<n){
-            while(!set.add(s.charAt(r))){
-                set.remove(s.charAt(l));
-                l++;
-            }
-            r++;
-            int len = r - l;
-            if(maxlen < len) maxlen = len;
+    public int findPeakElement(int[] nums) {
+        int n = nums.length;
+        if(n == 1)  return 0;
+        // if(n == 2)  return nums[0]>nums[1] ? 0 : 1;
+
+        if(nums[0] > nums[1])   return 0;
+        if(nums[n-1] > nums[n-2])   return n-1;
+        for(int i = 0 ; i < n ; i++){
+            if((nums[i] > nums[i+1]) && (nums[i] > nums[i-1]))  return i;
+            // else if(i == 0 && nums[i] < nums[i+1])   return i;
+            // else if(i == n-1 && nums[i] > nums[i-1])   return i;
         }
-        return maxlen;
+        return -1;
     }
 }
