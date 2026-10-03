@@ -6,10 +6,10 @@ class Solution {
         while(lo <= hi){
             int mid = lo + (hi-lo) / 2;
             System.out.println(mid);
-            if((lonmid * mid == num){
+            if((long)mid * mid == num){
                 return true;
             }
-            else if(mid * mid < num){
+            else if((long)mid * mid < num){
                 lo = mid + 1;
             }
             else hi = mid - 1;
