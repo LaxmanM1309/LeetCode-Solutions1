@@ -1,6 +1,6 @@
 # 📝 69. Sqrt(x) (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/sqrtx)
+🔗 [Problem Link](https://leetcode.com/problems/sqrtx/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
@@ -8,8 +8,8 @@
 Math, Binary Search, Newton's Method
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 1 ms
+- **Memory:** 42.3 MB
 
 ---
 
