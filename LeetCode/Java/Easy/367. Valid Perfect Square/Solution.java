@@ -6,7 +6,7 @@ class Solution {
         while(lo <= hi){
             int mid = lo + (hi-lo) / 2;
             System.out.println(mid);
-            if(mid * mid == num){
+            if((lonmid * mid == num){
                 return true;
             }
             else if(mid * mid < num){
