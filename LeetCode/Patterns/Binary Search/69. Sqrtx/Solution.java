@@ -5,7 +5,7 @@ class Solution {
         int ans = 0;
         while(start <= end){
             int mid = start + (end - start) / 2;
-            if(mid * mid == x){
+            if((lonmid * mid == x){
                 return mid;
             }
             else if(mid * mid < x){
