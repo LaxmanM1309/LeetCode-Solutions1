@@ -10,15 +10,15 @@ class Solution {
                 nums[i] = nums[i] * -1;
                 k--;
             }
-            min = Math.min(min,nums[i]);
         }
-        if(k > 0){
-            if(k == 2) ;
-            else {
-                k = 1;
-                sum -= 2 * min;
-            }
+        for(int x : nums){
+            min = Math.min(min,x);
         }
+        System.out.println(min);
+        if(k % 2 == 1){
+            sum += -2 * min;
+        }
+        System.out.println(sum);
         
         for(int x : nums){
             sum += x;
