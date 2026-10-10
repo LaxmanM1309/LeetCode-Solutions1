@@ -2,6 +2,7 @@ class Solution {
     public boolean isPerfectSquare(int num) {
         int lo = 0;
         int hi = num;
+        int temp = 0;
         
         while(lo <= hi){
             int mid = lo + (hi-lo) / 2;
